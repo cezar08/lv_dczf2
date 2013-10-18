@@ -1,0 +1,19 @@
+<button onclick="location.href='/application/autores/save'">Novo</button>
+<table>
+    <thead>      
+        <tr>
+            <th>Nome</th><th>Sobrenome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($autores as $autor){ ?>
+        <tr>
+            <td><?php echo $autor->getNome(); ?></td>
+            <td><?php echo $autor->getSobrenome(); ?></td>
+            <td><a href="/application/autores/save/id/<?php echo $autor->getId(); ?>" >Editar</a></td>
+            <td><a href="/application/autores/delete/id/<?php echo $autor->getId(); ?>" >Excluir</a></td>
+        </tr>
+        <?php } ?>
+    </tbody>
+
+</table>
